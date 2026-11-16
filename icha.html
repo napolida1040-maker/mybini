@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>untuk pacarku icha ❤️</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffe4e9, #ffc0cb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    color: #8b1745;
+}
+
+.container {
+    background: rgba(255,255,255,0.8);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 25px;
+    max-width: 450px;
+    box-shadow: 0 10px 35px #d85b8b66;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.photo {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #ff8fab;
+    box-shadow: 0 5px 20px #ff8fab;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+button {
+    background: #ff4f87;
+    border: none;
+    padding: 13px 25px;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #e52e70;
+    transform: scale(1.05);
+}
+
+#pesan {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d63384;
+    font-weight: bold;
+}
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: #ff4f87;
+    animation: naik 5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes naik {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>for sayangkuu icha ❤️</h1>
+
+    <!-- Ganti foto-icha.jpg dengan foto Icha -->
+    <img src="640d75008729452a987809e288ede148.webp" class="photo" alt="Foto Icha">
+
+    <h2>My Favorite Person 💗</h2>
+
+    <p>
+        Ichakuu sayangg, mungkin aku bukan orang yang sempurna,
+        tapi ada satu hal yang selalu pasti,
+        yaitu betapa besarnya rasa sayang akuu sama kamuu.
+    </p>
+
+    <p>
+        Aku cinta sama kamu bukan hanya karena senyummu,
+        bukan hanya karena cantikmu,
+        tetapi karena icha adalah brainrot
+        yang selalu ingin aku perjuangkan.
+    </p>
+
+    <p>
+        Kalau dunia memberiku seribu alasan untuk menyerah,
+        aku akan tetap mencari satu alasan untuk bertahan,
+        dan alasan itu adalah kamu, Icha. ❤️
+    </p>
+
+    <button onclick="tampilkanPesan()">
+        Klik Aku, Icha 💌
+    </button>
+
+    <div id="pesan">
+        I LOVE YOU, ICHA! ❤️<br>
+        Hari ini, besok, dan selamanya. 🥺💕
+    </div>
+
+</div>
+
+<script>
+function tampilkanPesan() {
+    document.getElementById("pesan").style.display = "block";
+}
+
+// Animasi hati
+function buatHati() {
+    const hati = document.createElement("div");
+    hati.className = "heart";
+    hati.innerHTML = "❤️";
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.fontSize = (15 + Math.random() * 25) + "px";
+    hati.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(hati);
+
+    setTimeout(() => {
+        hati.remove();
+    }, 7000);
+}
+
+setInterval(buatHati, 300);
+</script>
+
+</body>
+</html>
